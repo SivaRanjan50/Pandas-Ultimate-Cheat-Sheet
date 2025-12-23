@@ -209,9 +209,12 @@ df.describe(percentiles=[0.1, 0.5, 0.9])
 # Counts
 df.count()         # Non-null values per column
 df.nunique()       # Unique values per column
-df.value_counts()  # For Series: frequency of unique values
-df['col'].value_counts(normalize=True)  # Proportions
-df['col'].value_counts(dropna=False)    # Include NaN
+df.value_counts()  # What it does: Counts the frequency of each unique value in a Series.
+df['col'].value_counts(normalize=True)  # Proportions(Shows the proportion of each value instead of raw counts.)
+                                        # Use case: When you want to understand the distribution as percentages rather than absolute numbers.
+df['col'].value_counts(dropna=False)    # Include NaN(null/None) values in the count.
+                                        # (By default, value_counts() excludes NaN values.)
+        
 ```
 
 ## Checking Values
