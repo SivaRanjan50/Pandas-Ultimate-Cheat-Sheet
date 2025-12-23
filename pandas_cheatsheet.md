@@ -196,7 +196,8 @@ df.shape           # (rows, columns)
 df.columns         # Column names
 df.index           # Index
 df.dtypes          # Data type per column
-df.memory_usage()  # Memory usage
+df.memory_usage(deep=True)  # Memory usage
+                            (returns in bytes)
 
 # Statistics
 df.describe()      # Summary statistics for numeric columns
